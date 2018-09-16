@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>FC Real Transilvania - oficial site of FC Real Transivania</title>
+		<link rel="stylesheet" type="text/css" href="CSS/realtransilvania.css" />
+		<script type="text/javascript" src="Script/ddmenu.js"></script>
+		<script type="text/javascript" src="Script/utils.js"></script>
+		<script type="text/javascript" src="Script/ajx_stuff.js"></script>
+		<script type="text/javascript" src="Script/lightbox.js"></script>
+		<script type="text/javascript" src="Script/swfobject.js"></script>
+		<script type="text/javascript">
+			var rut='http://www.steauafc.com/';
+			var lg = 'en';
+			var nfmax='2';
+			var tick;
+			var tick2;
+			var flashvars= {};
+			var params= { };
+			params.wmode = "transparent";
+			params.allowFullScreen="true";
+			var attributes = {};
+		</script>
+</head>
+
+<body onunload="stop(tick);stop(tick2)">
+
+	<div id="main">
+		
+		<header>
+			<div id="social_media_icons">
+				<a href="https://www.facebook.com/RealTransilvania/"><img src="Images/Header/facebook.png" alt="facebook"/></a>
+				<a href="#"><img src="Images/Header/google.png" alt="google"/></a>
+				<a href="https://www.youtube.com/watch?v=DvIQkGHt4eU"><img src="Images/Header/youtube.png" alt="youtube"/></a>
+				<a href="https://twitter.com/realtransilvan"><img src="Images/Header/twitter.png" alt="twitter"/></a>
+				<a href="#"><img src="Images/Header/vimeo.png" alt="vimeo"/></a>
+			</div>
+			<div id="real_logo">
+			<a href="realtransilvania.html">
+				<img src="Images/Header/reallogo.png" alt="FCReal"/>
+			</a>
+			<a href="realtransilvania.html">
+				<img src="Images/Header/real.png" alt="Real"/>
+			</a>
+			</div>
+			<hr>
+		</header>
+	
+		<div id="cont_supertop">
+			<div id="bar_supertop">
+				<div id="languages">
+					<a href="realtransilvania.html" class="language_off"
+						style="margin-right:5px;">
+					<img src="Images/Important/ro.jpg" alt="Ro"/>
+					</a>
+				</div>	
+				<div id="register">
+					<a href="singup.html" class="but_supertop2 fd" >Sing up</a>
+					<div class="clear"></div>
+				</div>			
+				<div id="login">					
+					<form name="frm_login" action="post">
+						<input type="hidden" name="op" value="login">
+						<a href="javascript:do_login();" class="but_supertop fd">Log in</a>
+						<input type="text" onfocus="SelectAll('usr')" name="usr" id="usr" 
+						class="txt2 fs" value="name" style="width:100px; height: 3px; margin-top: 5px;background-color:blue;">
+						<input type="password" onkeypress="checkEnter(event,'frm_login',function()
+						{ do_login() } )" name="pass" id="pass" class="txt2 fs" value="password" style="width:100px; height:3px;
+						margin-left:5px; margin-right:5px; margin-top: 5px; background-color:blue;">
+						<div class="clear"></div>
+					</form>
+				</div>
+				<div id="search">
+					<form name="frm_search" id="frm_search" action="post" onsubmit="return false;">
+						<input type="hidden" name="op" value="general_search">
+						<input type="text" onkeypress="checkEnter(event,'frm_search',function()
+							{ do_search() })" onfocus="SelectAll('key_word')" name="key_word" id="key_word"
+							class="txt2 fs" value="search" style="width:120px; margin-right:5px; height:3px; margin-top: 5px;background-color:blue;">
+						<a href="javascript:do_search();" class="but_supertop fs">Search</a>
+						<div class="clear"></div>
+					</form>
+				</div>
+				<div id="like_button">
+					<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FRealTransilvania%2F&width=76&layout=button_count&action=like&show_faces=true&share=false&height=21&appId" 
+						width="120" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
+					</iframe>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>	
+	
+		<!-- Navigation menu -->
+		<div id="menu_bar">
+			<ul class="menu" id="menu">
+				<li>
+					<a href="realtransilvania.html" class="main_menu">Home</a>
+				</li>
+				<li>
+					<a href="news.html" class="main_menu">News</a>
+					<ul>
+						<li><a href= "newsFteam.html">First Team</a></li>
+						<li><a href= "newsSteam.html">Over 35`s Team</a></li>
+						<li><a href= "diverse.html" class="menu_last">Varied News</a></li>
+					</ul>
+				</li>
+				<li><a href="team.html" class="main_menu">Team</a>
+					<ul>
+						<li><a href="team.html">First Team</a></li>
+						<li><a href="secondteam.html" class="menu_last">Over 35`s Team</a></li>
+					</ul>				
+				</li>
+				<li>
+					<a href="club.html" class="main_menu">Club</a>
+					<ul>
+						<li><a href="club.html">Istorics</a></li>
+						<li><a href="records.html">Records</a></li>						
+						<li><a href="trophies.html" class="menu_last">Trophies</a></li>		
+					</ul>
+				</li>
+				<li>
+					<a href="matches.html" class="main_menu">Matches</a>
+					<ul>
+						<li><a href="firstteammatches.html">First Team</a></li>
+						<li><a href="over35teammatches.html">Over 35`s Team</a></li>
+						<li><a href="premierA.html" class="menu_last">League Table</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="sponsors.html" class="main_menu">Sponsors</a>
+				</li>
+				
+				<li>
+					<a href="archieve.html" class="main_menu">Archieve</a>
+					<ul>
+						<li><a href="photo.html">Photo Archieve</a></li>
+						<li><a href="video.html" class="menu_last">Video Archieve</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="aboutus.html" class="main_menu">About Us</a>
+				</li>
+				<li>
+					<a href="contact.html" class="main_menu">Contact US</a>
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>	
+		<div id= "container">
+			
+			<!-- Left side of Container -->
+			<div class= "leftSide">
+				<div id="real_team" style="background:none;">
+					<div class="top_team">
+						<div class="arrow mr4 fs">
+							<a class="redlabel fs" href="goalkepers.html">Goalkepers</a>
+						</div>
+						<div class="arrow mr4 fs">
+							<a class="redlabel fs" href="defenders.html">Defenders</a>							
+						</div>
+						<div class="arrow mr4 fs">
+							<a class="redlabel fs" href="midfielders.html">Midfielders</a>							
+						</div>
+						<div class="arrow mr4 fs">
+							<a class="redlabel fs" href="strikers.html">Strikers</a>							
+						</div>
+						<div class="arrow fd mr4">
+							<a class="bluelabel fs" href="techincalstaff.html">technical staff</a>						
+						</div>
+					<div class="clear"></div>
+					<div class="breakpoint"></div>
+						<div id="players_table">
+							<a href="silviu.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>1</span>
+							</a>
+							<a href="team.html" title="Andrei Voiniciuc">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>2</span>
+							</a>
+							<a href="team.html" title="Put Name Here">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>3</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>4</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>5</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>6</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>7</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>8</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>9</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>10</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>11</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>12</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>13</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>14</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>15</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>16</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>17</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>18</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>19</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>20</span>
+							</a>
+							
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>21</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>22</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>23</span>
+							</a>
+							<a href="team.html" title="Silviu Voievod">
+								<img src="Images/1stTeam/silviu.jpg" width="135" height="180">
+								<span>24</span>
+							</a>
+							<div class="clear"></div>	
+						</div>
+						<div class="secondteam fd mr4">
+							<a class="bluelabel fs" href="secondteam.html">Over 35`s Team</a>
+						</div>	
+						<div class="clear"></div>	
+
+					</div>
+				</div>
+			</div>
+			<!-- End of Left side Container -->
+			
+			<!-- Right side of Container -->
+			<div class= "rightSide">
+				<div class="nextMatch">
+					<div class="caption2">
+						<div class="match">Next Match</div>
+						<div id="timetable_arrows">
+							<input type="hidden" name="nextmatch_value" value="1">
+							<img src="Images/Important/sag1_mic.jpg" alt 
+							style="display: block; margin: 1px auto 3px auto; cursor:pointer;"
+							onclick="do_nextmatch(' ');">
+							<img src="Images/Important/sag2_mic.jpg" alt 
+							style="display: block; margin: 0px auto 0px auto; cursor:pointer;"
+							onclick="do_nextmatch(' ');">
+						</div>
+						<div id="clasamentSelect">Fc Real</div>
+						<div class="clear"></div>
+					</div>
+					<div class="fs small_sigla" style="margin:30px 0px 0px 20px; _margin:20px 0px 0px 10px; ">
+						<img src="Images/matches/icon1-55dc799ev1_site_icon.png" alt="img" style="width:80px; height:80px;">
+					</div>
+					<div class="center fs">
+						<div class="eleven grey">Premier A</div>
+						<div class="twelve white">11 Dec 2016</div>
+						<div class="fourteen white">11:00</div>
+					</div>
+					<div class="fs small_sigla" style="margin:30px 0px 0px 0px;">
+						<img src="Images/Header/reallogo.png" alt="real"
+						style="width:80px; height:80px;" />
+					</div>
+					<div class="clear"></div>
+					<div class="uppercase white bold twelve centered" 
+					style="margin-top:20px; margin-bottom:3px;">
+						Baldoyle Grange United - FC Real Transilvania
+					</div>
+					<div class="white ten centered">Refferre: Regan Vicent</div>
+					<div class="white eleven centered">Stadium: Verona Leisure Centre</div>
+					<div class="clear"></div>
+				</div>
+				<div class="breakpoint"></div>
+					<div class="sponsors">
+						<img src="Images/Sponsors/images.png" alt="img"/>
+					</div>
+					<div class="breakpoint"></div>
+					<div class="sponsors">
+						<img src="Images/Sponsors/copy-logo_web.png" alt="img"/>
+					</div>
+					<div class="breakpoint"></div>
+				<!-- Code for League Table -->
+				<div id="leagueTable">
+					<div class="caption2">
+						<div class="tableleague">League Table</div> 
+						<div id="clasamentSelect1">Fc Real Transilvania</div>
+						<div class="clear"></div>
+					</div>
+					<div id="clasament_intro_x" class="left" 
+						style="margin:5px auto 0px auto; width:278px; background:#5d5d5d;">
+						<table cellpadding="0" cellspacing="0" border="0" width="278">
+							<tbody>
+							<tr height="25">
+								<td class="cls_header left" width="30"></td>
+								<td class="cls_header left" width="" style="padding-left:10px;">Team</td>
+								<td class="cls_header center" width="35">M</td>
+								<td class="cls_header center" width="50">GF-GA</td>
+								<td class="cls_header center end" width="35">P</td>
+							</tr>
+							<tr height="15">
+								<td class="cls_normal">&nbsp;</td>
+								<td class="cls_normal">&nbsp;</td>
+								<td class="cls_normal">&nbsp;</td>
+								<td class="cls_normal">&nbsp;</td>
+								<td class="cls_normal end">&nbsp;</td>
+							</tr>
+							<tr height="18">
+								<td class="cls_normal center">1.</td>
+								<td class="cls_normal left" 
+									style="padding-left:10px;">Sheriff YC *</td>
+								<td class="cls_normal center">6</td>
+								<td class="cls_normal center">15-4</td>
+								<td class="cls_normal center">13</td>
+							</tr>
+							<tr height="18">
+								<td class="cls_normal center">2.</td>
+								<td class="cls_normal left" style="padding-left:10px;">E.Wall Bessborough</td>
+								<td class="cls_normal center">5</td>
+								<td class="cls_normal center">11-2</td>
+								<td class="cls_normal center">11</td>
+							</tr>
+							<tr height="18">
+								<td class="cls_normal center">3.</td>
+								<td class="cls_normal left" style="padding-left:10px;">Kilbarrack United</td>
+								<td class="cls_normal center">6</td>
+								<td class="cls_normal center">15-4</td>
+								<td class="cls_normal center">10</td>
+							</tr>
+							<tr height="18">
+								<td class="cls_normal center">4.</td>
+								<td class="cls_normal left" style="padding-left:10px;">Ayrfield United</td>
+								<td class="cls_normal center">7</td>
+								<td class="cls_normal center">13-10</td>
+								<td class="cls_normal center">9</td>
+							</tr>
+							<tr height="18">
+								<td class="cls_highlight center">5.</td>
+								<td class="cls_highlight left" style="padding-left:10px;">Real Transilvania</td>
+								<td class="cls_highlight center">6</td>
+								<td class="cls_highlight center">12-17</td>
+								<td class="cls_highlight center">9</td>
+							</tr>
+							<tr height="18">
+								<td class="cls_normal center">6.</td>
+								<td class="cls_normal left" style="padding-left:10px;">Baldoyle Grange</td>
+								<td class="cls_normal center">7</td>
+								<td class="cls_normal center">10-25</td>
+								<td class="cls_normal center">7</td>
+							</tr>
+							<tr height="18">
+								<td class="cls_normal center">7.</td>
+								<td class="cls_normal left" style="padding-left:10px;">Usher Celtic</td>
+								<td class="cls_normal center">4</td>
+								<td class="cls_normal center">9-5</td>
+								<td class="cls_normal center">6</td>
+							</tr>
+							<tr height="18">
+								<td class="cls_normal center">8.</td>
+								<td class="cls_normal left" style="padding-left:10px;">Hardwicke FC</td>
+								<td class="cls_normal center">7</td>
+								<td class="cls_normal center">10-18</td>
+								<td class="cls_normal center">6</td>
+							</tr>
+							<tr height="18">
+								<td class="cls_normal end" colspan="5">&nbsp;</td>
+							</tr>							
+						</tbody>
+						</table>
+						<a href="premierA.html" class="a_blue_two">see the full table</a>	
+					</div>
+					<div class="space"></div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- HTML for bottom page-->
+		<div class="clear"></div>
+		<div class="breakpoint"></div>
+		<div id="bottom_page">
+			<a class="caption" href="#" style="display:block; margin-top: -50px; text-align: left;"> 
+				Real Transilvania Sponsors
+			</a>
+			<br>
+				<a href="http://ifitinteriors.com/" target="_blank" style="margin:30px 20px 0px 0px; ">
+					<img src="Images/Sponsors/images.png" alt="I-fit" style="width:200px; height:100px;"/>
+				</a>
+				<a href="http://gicutrans.ro/" target="_blank" style="margin:30px 20px 0px 0px; ">
+					<img src="Images/Sponsors/copy-logo_web.png" alt="Gicu" style="width:200px; height:100px;"/>
+				</a>
+				<a href="http://www.plattreilly.ie/" target="_blank" style="margin:30px 20px 0px 0px;">
+					<img src="Images/Sponsors/platt&reily.jpg" alt="P&R" style="width:200px; height:100px;" />
+				</a>
+				<a href="http://www.mizzoni.ie/" target="_blank" style="margin:30px 20px 0px 0px; ">
+					<img src="Images/Sponsors/mizzoni.jpg" alt="Mizzoni" style="width:200px; height:100px;"/>
+				</a>
+			<div class="clear"></div>
+			<hr>
+			
+		</div>
+		
+		<div class="clear"></div>		
+		<footer>
+			<div id="termene">
+				This is the official website of FC Real Transilvania. 
+				All rights reserved. Reprodution in comercial purposes, adapting, distributing or transmitting of 
+				one or more parts of this website or the informations which are available on this website, 
+				in any purpose or form, is forbidden without written agreement from FC Real Transilvania. To see the terms 
+				and conditions of use for this website, click 
+				<a href="#" class="lk_bottom">here</a>
+				. To contact us please use the e-mail address realtransilvania@gmail.com. Using this website is a sign of 
+				agreement with the 
+				<a href="#" class="lk_bottom">terms of use</a>
+				. If you don't agree with these terms you should exit this website.			
+				<div style="margin-top:20px;">
+					<a href="#" target="_blank"><img src="http://ts1.trafic.ro/cgi-bin/trafic.png?rid=steauafccom&amp;rn=146814645072&amp;rk=9454777371846995406-17224878981011003295&amp;cc=default&amp;c=24&amp;w=1536&amp;h=864&amp;j=0&amp;f=23.0&amp;b=63&amp;os=10&amp;d=http%3A//www.steauafc.com/en/&amp;dn=steauafc.com&amp;r=http%3A//www.steauafc.com/en/prima_echipa/&amp;p=&amp;o=0&amp;se=&amp;vid=842el131690c9a3180c8cab7275a5283&amp;fst=1477582452&amp;lst=1479561149&amp;cst=1479665516&amp;vn=22&amp;vl=0&amp;ldt=-1&amp;jsl=197&amp;uuid=&amp;erru=&amp;pt=FCSB%20-%20FC%20Steaua%20Bucharest%20official%20website&amp;prid=" 
+					width="88" height="31" border="0" alt="Trafic"></a>			
+				</div>				
+			</div>
+		</footer>
+	</div>
+	<script type="text/javascript">
+			var menu = new menu.dd("menu");
+			menu.init("menu","menuhover");		
+		</script>
+</body>
+</html>
+
